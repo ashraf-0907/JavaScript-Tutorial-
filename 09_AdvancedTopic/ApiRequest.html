@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Api Request XML request</title>
+</head>
+<body>
+
+    <div class="card">
+        <h2>BirthDay Happy</h2>
+        <div id="Dp">
+            <img src="" alt="img">
+
+        </div>
+        <h1 id="name">Name</h1>
+       <!-- <div id="label1">
+        <label for="pno" id="pno">Phone</label>
+        <br>
+        <label for="email" id="email">Email</label>
+       </div> -->
+    </div>
+</body>
+<script>
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET','https://randomuser.me/api/');
+   // console.log(xhr.readyState);
+   // tracking the states in xml request there are 4 state
+   xhr.onreadystatechange= async ()=>{
+     console.log(xhr.readyState);
+     if(xhr.readyState===4){
+         const data = JSON.parse((xhr.responseText)); // JSON.parse is used to parse string to object 
+         console.log(data.results[0].name);
+         const img= await document.querySelector('img');
+         img.setAttribute('src',data.results[0].picture.large)
+         document.querySelector('h1').innerHTML=((data.results[0].name.first))
+     }
+
+   }
+    xhr.send();
+
+ </script>
+</html>

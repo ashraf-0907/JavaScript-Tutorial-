@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Async Tutorial 2</title>
+</head>
+<body>
+    <h1>Song Playlist</h1>
+    <table>
+        <tr>
+            <th>Song Name</th>
+            <th>Singer</th>
+            <th>Lyricst</th>
+        </tr>
+        <tr>
+            <td>Janiye</td>
+            <td>Vishal Mishra</td>
+            <td>Vishal Mishra</td>
+        </tr>
+    </table>
+    <h2>Add Song to playlist</h2>
+    <form>
+        <label for="song_name">Song Name:    <input id="inpfield" type="text"></label>
+        <br>
+        <label for="song_singer">Singer:     <input id="inpfield" type="text"></label>
+        <br>
+        <label for="lyricit">Lyricit:    <input id="inpfield" type="text"></label>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+<script>
+    const form = document.querySelector('form');
+    console.log(form);
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const k=document.querySelectorAll('#inpfield')
+        const tr = document.createElement('tr');
+        k.forEach((item)=>{
+            const td=document.createElement('td');
+            td.appendChild(document.createTextNode(item.value));
+            tr.appendChild(td);
+        })
+        console.log(tr);
+        document.querySelector('table').appendChild(tr);
+    })
+</script>
+</html>

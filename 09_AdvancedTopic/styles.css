@@ -1,0 +1,38 @@
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.card{
+    display: flexbox;
+    background-color:rgb(161, 14, 14);
+    border-radius: 8px;
+    padding: 10px;
+    border: solid 2px black;
+    color: rgb(230, 224, 224);
+    /* margin-top: 10px; */
+    margin-bottom: 40px;
+    background-image: url('https://www.pngall.com/wp-content/uploads/2018/03/Happy-Birthday-Balloons-PNG-Picture.png');
+    background-size: cover;
+    
+}
+
+#Dp{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+img{
+    border-radius: 100%;
+}
+h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#label1{
+    margin-top: auto;
+    margin-bottom: 0px;
+    font-style: bold;
+}

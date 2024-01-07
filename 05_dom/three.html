@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+</head>
+<body>
+    <div id="div-class">
+        <ul id="language">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>CPP</li>
+            <li>Python</li>
+        </ul>
+    </div>
+</body>
+<script>
+const ulp=document.querySelector("#language").children;
+console.log(ulp);
+const arr=Array.from(ulp);
+console.log(arr);
+// suppose you have to add a language to the ul
+
+const addLang = (lang)=>{
+const li= document.createElement('li');
+li.appendChild(document.createTextNode(lang));
+document.querySelector('#language').appendChild(li);
+}
+
+addLang("Golang");
+
+// Edit a language
+
+const lang=document.querySelector("li:nth-child(2)")
+const newLi=document.createElement('li');
+newLi.appendChild(document.createTextNode('Rubiq'));
+lang.replaceWith(newLi);
+
+</script>
+</html>

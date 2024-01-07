@@ -1,0 +1,16 @@
+table{
+    border: solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* padding: 20px; */
+}
+tr{
+    border: solid 1px black;
+}
+td{
+    border: solid 1px black;
+}
+input{
+    border-radius: 2px;
+    padding: 2px;
+}
